@@ -10,6 +10,7 @@
 
 @interface CountDownLabel()
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) dispatch_source_t GCDtimer;
 @end
 @implementation CountDownLabel
 
@@ -35,10 +36,20 @@
     [self countDown];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    
+//    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+//    self.GCDtimer = timer;
+//    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, (uint64_t)(1 * NSEC_PER_SEC), 0);
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_source_set_event_handler(timer, ^{
+//        [weakSelf countDown];
+//    });
+//    dispatch_resume(timer);
 }
 
 -(void)countDown{
     if (self.count > 0) {
+        NSLog(@"-------%ld",self.count);
         self.text = [NSString stringWithFormat:@"%ld",self.count];
         CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
         animation.removedOnCompletion = NO;
@@ -52,12 +63,21 @@
         _count --;
     }else{
         [self stopTime];
+//        [self pause];
     }
 }
 -(void)stopTime{
     if (self.timer) {
         [self.timer invalidate];
         self.timer = nil;
+    }
+    [self removeFromSuperview];
+}
+
+-(void)pause{
+    if (self.GCDtimer) {
+        dispatch_cancel(self.GCDtimer);
+        self.GCDtimer = nil;
     }
     [self removeFromSuperview];
 }

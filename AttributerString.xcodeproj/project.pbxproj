@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9CA8AD952308EDD800AD5D36 /* ShowStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8AD942308EDD800AD5D36 /* ShowStepView.m */; };
 		9CA8AD9B2309031C00AD5D36 /* CountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */; };
+		9CA8ADA1230944CA00AD5D36 /* RotaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8ADA0230944CA00AD5D36 /* RotaView.m */; };
+		9CA8ADA42309453E00AD5D36 /* pk_gunlun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA8ADA22309453E00AD5D36 /* pk_gunlun@2x.png */; };
+		9CA8ADA52309453E00AD5D36 /* pk_gunlun@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA8ADA32309453E00AD5D36 /* pk_gunlun@3x.png */; };
 		A6536C7822E6A1BF0065746F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6536C7722E6A1BF0065746F /* AppDelegate.m */; };
 		A6536C7B22E6A1BF0065746F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6536C7A22E6A1BF0065746F /* ViewController.m */; };
 		A6536C7E22E6A1BF0065746F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6536C7C22E6A1BF0065746F /* Main.storyboard */; };
@@ -64,6 +67,10 @@
 		9CA8AD942308EDD800AD5D36 /* ShowStepView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowStepView.m; sourceTree = "<group>"; };
 		9CA8AD992309031C00AD5D36 /* CountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownLabel.h; sourceTree = "<group>"; };
 		9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownLabel.m; sourceTree = "<group>"; };
+		9CA8AD9F230944CA00AD5D36 /* RotaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotaView.h; sourceTree = "<group>"; };
+		9CA8ADA0230944CA00AD5D36 /* RotaView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotaView.m; sourceTree = "<group>"; };
+		9CA8ADA22309453E00AD5D36 /* pk_gunlun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pk_gunlun@2x.png"; sourceTree = "<group>"; };
+		9CA8ADA32309453E00AD5D36 /* pk_gunlun@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pk_gunlun@3x.png"; sourceTree = "<group>"; };
 		A6536C7322E6A1BF0065746F /* AttributerString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttributerString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6536C7622E6A1BF0065746F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6536C7722E6A1BF0065746F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				A6536D5D22E6DF720065746F /* YYImage */,
+				9CA8ADA22309453E00AD5D36 /* pk_gunlun@2x.png */,
+				9CA8ADA32309453E00AD5D36 /* pk_gunlun@3x.png */,
 				A6536D4622E6DF2F0065746F /* level_27@2x.png */,
 				A6536D4822E6DF2F0065746F /* level_27@3x.png */,
 				A6536D4522E6DF2F0065746F /* level_28@2x.png */,
@@ -197,6 +206,8 @@
 				9CA8AD942308EDD800AD5D36 /* ShowStepView.m */,
 				9CA8AD992309031C00AD5D36 /* CountDownLabel.h */,
 				9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */,
+				9CA8AD9F230944CA00AD5D36 /* RotaView.h */,
+				9CA8ADA0230944CA00AD5D36 /* RotaView.m */,
 				A6536C7C22E6A1BF0065746F /* Main.storyboard */,
 				A6536C7F22E6A1C10065746F /* Assets.xcassets */,
 				A6536C8122E6A1C10065746F /* LaunchScreen.storyboard */,
@@ -345,6 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA8ADA52309453E00AD5D36 /* pk_gunlun@3x.png in Resources */,
+				9CA8ADA42309453E00AD5D36 /* pk_gunlun@2x.png in Resources */,
 				A6536D5722E6DF300065746F /* level_29@2x.png in Resources */,
 				A6536D5522E6DF300065746F /* level_32@2x.png in Resources */,
 				A6E1D68A22E99461000659AF /* vb_applepay@2x.png in Resources */,
@@ -415,6 +428,7 @@
 				A6536D6C22E6DF720065746F /* YYAnimatedImageView.m in Sources */,
 				A6536D6A22E6DF720065746F /* YYImageCoder.m in Sources */,
 				A6536D6B22E6DF720065746F /* YYFrameImage.m in Sources */,
+				9CA8ADA1230944CA00AD5D36 /* RotaView.m in Sources */,
 				A6536C7822E6A1BF0065746F /* AppDelegate.m in Sources */,
 				A6536D6922E6DF720065746F /* YYImage.m in Sources */,
 			);

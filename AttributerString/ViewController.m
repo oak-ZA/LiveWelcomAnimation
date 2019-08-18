@@ -12,6 +12,7 @@
 #import "ShowStepView.h"
 #import <Masonry.h>
 #import "CountDownLabel.h"
+#import "RotaView.h"
 #define SCREEN_Width [UIScreen mainScreen].bounds.size.width
 #define SCREEN_Height [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()<CAAnimationDelegate>
@@ -26,6 +27,8 @@
 
 @property (nonatomic,strong) MASConstraint *width;
 @property (nonatomic,strong) ShowStepView *stepView;
+
+@property (nonatomic,strong) RotaView *rotaView;
 @end
 
 @implementation ViewController
@@ -73,10 +76,30 @@
     [button3 addTarget:self action:@selector(clickButton3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
     
+    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button4.frame = CGRectMake(80, 200, 80, 80);
+    [button4 setTitle:@"旋转" forState:UIControlStateNormal];
+    button4.backgroundColor = [UIColor blueColor];
+    button4.titleLabel.font = [UIFont systemFontOfSize:13.f];
+    [button4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button4.layer.cornerRadius = 8.f;
+    button4.layer.masksToBounds = YES;
+    [button4 addTarget:self action:@selector(clickButton4) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+    
+    
+    RotaView *rotaView = [[RotaView alloc] initWithFrame:CGRectMake(100, 300, 147, 31)];
+    self.rotaView = rotaView;
+    [self.view addSubview:rotaView];
+    
     self.dataSources = [NSMutableArray arrayWithArray:@[@"张奥",@"嘻嘻",@"呵呵",@"哈哈",@"张大吉"]];
     
     NSTimer *T = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(addData) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:T forMode:NSRunLoopCommonModes];
+}
+
+-(void)clickButton4{
+    [self.rotaView initTimer];
 }
 
 -(void)clickButton3{
