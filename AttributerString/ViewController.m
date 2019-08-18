@@ -136,8 +136,17 @@
             self.width.mas_equalTo(SCREEN_Width - 40);
         }];
         [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [self performSelector:@selector(disMissStepView) withObject:self afterDelay:2];
     }];
     
+}
+-(void)disMissStepView{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.stepView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.stepView removeFromSuperview];
+    }];
 }
 -(void)addData{
     
