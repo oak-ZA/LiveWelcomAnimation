@@ -11,6 +11,7 @@
 #import "YYImage.h"
 #import "ShowStepView.h"
 #import <Masonry.h>
+#import "CountDownLabel.h"
 #define SCREEN_Width [UIScreen mainScreen].bounds.size.width
 #define SCREEN_Height [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()<CAAnimationDelegate>
@@ -61,10 +62,36 @@
     [button2 addTarget:self action:@selector(clickButton2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
     
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button3.frame = CGRectMake(300, 80, 80, 80);
+    [button3 setTitle:@"倒计时" forState:UIControlStateNormal];
+    button3.backgroundColor = [UIColor blueColor];
+    button3.titleLabel.font = [UIFont systemFontOfSize:13.f];
+    [button3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button3.layer.cornerRadius = 8.f;
+    button3.layer.masksToBounds = YES;
+    [button3 addTarget:self action:@selector(clickButton3) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
+    
     self.dataSources = [NSMutableArray arrayWithArray:@[@"张奥",@"嘻嘻",@"呵呵",@"哈哈",@"张大吉"]];
     
     NSTimer *T = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(addData) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:T forMode:NSRunLoopCommonModes];
+}
+
+-(void)clickButton3{
+    CountDownLabel *label = [[CountDownLabel alloc] initWithFrame:CGRectMake((SCREEN_Width - 93.f)/2, (SCREEN_Height - 93.f)/2, 93.f, 93.f)];
+    label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    label.font =  [UIFont boldSystemFontOfSize:51];
+    label.layer.cornerRadius = 93.f/2;
+    label.layer.masksToBounds = YES;
+    label.count = 10;
+    [self.view addSubview:label];
+    
+    [label startCountDown];
+    
 }
 -(void)clickButton2{
     if (self.stepView) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9CA8AD952308EDD800AD5D36 /* ShowStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8AD942308EDD800AD5D36 /* ShowStepView.m */; };
+		9CA8AD9B2309031C00AD5D36 /* CountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */; };
 		A6536C7822E6A1BF0065746F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6536C7722E6A1BF0065746F /* AppDelegate.m */; };
 		A6536C7B22E6A1BF0065746F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6536C7A22E6A1BF0065746F /* ViewController.m */; };
 		A6536C7E22E6A1BF0065746F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6536C7C22E6A1BF0065746F /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		7DC052E5BEE6E27E1A616966 /* Pods-AttributerString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttributerString.release.xcconfig"; path = "Pods/Target Support Files/Pods-AttributerString/Pods-AttributerString.release.xcconfig"; sourceTree = "<group>"; };
 		9CA8AD932308EDD800AD5D36 /* ShowStepView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowStepView.h; sourceTree = "<group>"; };
 		9CA8AD942308EDD800AD5D36 /* ShowStepView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowStepView.m; sourceTree = "<group>"; };
+		9CA8AD992309031C00AD5D36 /* CountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownLabel.h; sourceTree = "<group>"; };
+		9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownLabel.m; sourceTree = "<group>"; };
 		A6536C7322E6A1BF0065746F /* AttributerString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttributerString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6536C7622E6A1BF0065746F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6536C7722E6A1BF0065746F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				A6536C7A22E6A1BF0065746F /* ViewController.m */,
 				9CA8AD932308EDD800AD5D36 /* ShowStepView.h */,
 				9CA8AD942308EDD800AD5D36 /* ShowStepView.m */,
+				9CA8AD992309031C00AD5D36 /* CountDownLabel.h */,
+				9CA8AD9A2309031C00AD5D36 /* CountDownLabel.m */,
 				A6536C7C22E6A1BF0065746F /* Main.storyboard */,
 				A6536C7F22E6A1C10065746F /* Assets.xcassets */,
 				A6536C8122E6A1C10065746F /* LaunchScreen.storyboard */,
@@ -406,6 +411,7 @@
 				A6536C7B22E6A1BF0065746F /* ViewController.m in Sources */,
 				A6536C8622E6A1C10065746F /* main.m in Sources */,
 				9CA8AD952308EDD800AD5D36 /* ShowStepView.m in Sources */,
+				9CA8AD9B2309031C00AD5D36 /* CountDownLabel.m in Sources */,
 				A6536D6C22E6DF720065746F /* YYAnimatedImageView.m in Sources */,
 				A6536D6A22E6DF720065746F /* YYImageCoder.m in Sources */,
 				A6536D6B22E6DF720065746F /* YYFrameImage.m in Sources */,
